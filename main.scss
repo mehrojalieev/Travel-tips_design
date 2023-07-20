@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,wght@0,900;1,900&family=Fredoka:wght@400;700&family=Hind+Madurai:wght@400;700&family=Indie+Flower&family=Inter&family=Lato:wght@700&family=Montserrat:ital,wght@0,300;1,100&family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@300;700&family=Oswald:wght@200&family=Philosopher:wght@400;700&family=Poppins:wght@100;400&family=Raleway:wght@500&family=Roboto+Condensed&family=Roboto:wght@300;400&family=Tektur:wght@600&family=Tilt+Prism&display=swap');
+
+@mixin f-style($f-size, $color, $weight){
+    font-size: $f-size;
+    color: $color;
+    font-weight: $weight;
+}
+$myfont: 'Poppins', sans-serif;
+%btn-style{
+    padding: 24px;
+    border: none;
+    border-radius: 12px;
+    background-color: #7B61FF;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.section{
+    position: relative;
+    width: 1300px;
+    height: 710px;
+    margin: auto;
+    img{
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+}
+nav{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1290px;
+    height: 50px;
+    margin: 10px auto;
+    top: 10px;
+    .nav__logo{
+        margin-left: 10px;
+    }
+    .nav__menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 800px;
+        height: 25px;
+        ul{
+            display: flex;
+            list-style-type: none;
+            gap: 0 24px;
+            li{
+                @include f-style(15px, #fff, 400);
+                font-family: $myfont;
+                opacity: 0.7;
+            }
+        }
+    }
+    .nav__commit{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 150px;
+        height: 48px;
+        p:first-child{
+            @include f-style(14px, #fff, 400);
+            opacity: 0.7;
+            font-family: $myfont;
+        }
+        p:last-child{
+            @include f-style(14px, #fff, 500);
+            font-family: $myfont;
+        }
+    }
+}
+.section__title{
+    position: absolute;
+    top: 155px;
+    left: 0;
+    right: 0;
+    width: 865px;
+    height: 62px;
+    margin:  auto ;
+    h2{
+        font-family: $myfont;
+        @include f-style(48px, #fff, 600)
+    }
+}
+.section__btn{
+    position: absolute;
+    top: 245px;
+    left: 0;
+    right: 0;
+    margin:  auto;
+    width: 272px;
+    height: 72px;
+    button{
+        @extend %btn-style;
+        font-family: $myfont;
+        @include f-style(18px, #fff, 500);
+    }
+}
+.section__form{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+   top: 420px;
+   left: 0;
+   right: 0;
+   margin: auto;
+    width:1100px;
+    height: 90px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.form__card{
+    display: flex;
+    align-items: center;
+    width: 240px;
+    height: 72px;
+    .card__img{
+        width: 24px;
+        height: 24px;
+    }
+    .card__text{
+        width:194px;
+        height: 40px;
+        margin-left: 16px;
+
+        p:first-child{
+            font-family: $myfont;
+            @include f-style(14px, #979797, 400);
+            
+        }
+        p:last-child{
+            font-family: $myfont;
+            @include f-style(16px, 161414, 500);
+        
+        }
+    }
+}
+.form__card1{
+    display: flex;
+    align-items: center;
+    width: 240px;
+    height: 72px;
+    .card__img{
+        width: 24px;
+        height: 24px;
+    }
+    .card__text{
+        width:360px;
+        height: 40px;
+        margin-left: 16px;
+
+        p:first-child{
+            font-family: $myfont;
+            @include f-style(14px, #979797, 400);
+            
+        }
+        p:last-child{
+            font-family: $myfont;
+            @include f-style(15px, 161414, 500);
+        
+        }
+    }
+}
+
+.hero__title{
+    width: 400px;
+    height: 50px;
+    margin: 30px auto;
+    h2{
+        @include f-style(32px, #161414, 600);
+        font-family: $myfont;
+    }
+}
+.hero__wrapper{
+    width: 1300px;
+    height: 320px;
+    margin: auto;
+    .hero__img{
+        display: flex;
+    }
+ .hero__img{
+    width: 1100px;
+    display: flex;
+    gap: 20px;
+    margin: auto;
+    justify-content: center;
+
+ }
+}
+
+
+.hotel__title{
+    width: 400px;
+    height: 50px;
+    margin: 120px 0 0 30px;
+    h2{
+        @include f-style(32px, #161414, 600);
+        font-family: $myfont;
+    }
+}
+.hotel__wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 1300px;
+    height: 450px;
+    margin: 60px auto;
+    .hotel__box{
+        width: 315px;
+        height: 380px;
+    }
+}
+
+.ice__title-wrapper{
+    width: 1200px;
+    height: 60px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .ice__title{
+        width: 400px;
+        height: 50px;
+        h2{
+            @include f-style(32px, #161414, 600);
+            font-family: $myfont;
+        }
+    }
+    .ice__text{
+        width: 120px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: rgba(246, 244, 255, 1);
+        border-radius: 10px;
+        padding: 0 5px;
+        p{
+            @include f-style(16px, #7B61FF, 400);
+            font-family: $myfont;
+        }
+    }
+}
+.ice__container{
+    display: flex;
+    justify-content: space-between;
+    // gap: 10px;
+    width: 1300px;
+    height: 400px;
+
+    margin: 100px auto;
+    .ice__containerleft{
+        display: flex;
+        width: 640px;
+        height: 400px;
+        .iceleft{
+            width: 316px;
+            height: 380px;
+        }
+        .iceleft__content{
+            width: 316px;
+            height: 364px;
+            margin: 0 0 0 10px;
+            .left__title{
+                width: 316px;
+                height: 124px;
+                h2{
+                    @include f-style(24px, #161414, 600);
+                    font-family: $myfont;
+                    line-height: 36px;
+                }
+            }
+            .left__text{
+                width: 316px;
+                height: 144px;
+                margin: 16px auto;
+                p{
+                    @include f-style(16px, #979797, 400);
+                    font-family: $myfont;
+                    line-height: 24px;
+                }
+            }
+            .left__foot{
+                width: 316px;
+                height: 20px;
+                margin: 80px auto;
+            }
+        }
+    }
+    .ice__containerright{
+        width: 630px;
+        height: 400px;
+        background-color: gold;
+    }
+}
+.active__title{
+    width: 300px;
+    height: 50px;
+    margin-left: calc(10%);
+    h2{
+        @include f-style(32px, #161414, 600);
+        font-family: $myfont;
+    }
+}
+.active__wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 65px auto;
+    gap: 7px;
+    width: 1300px;
+    height: 380px;
+    .active__box{
+        width: 316px;
+        height: 380px;
+    }
+}
+
+.about__wrapper{
+    display: inline-block;
+    display: flex;
+    width: 1200px;
+    height: 490px;
+    margin: 210px auto;
+    .about__content{
+        width: 550px;
+        height: 360px;
+        margin: 50px auto;
+        .about__title{
+            width: 300px;
+            height: 50px;
+            margin: 50px 0 0 0;
+            h2{
+                @include f-style(32px, #161414, 600);
+                font-family: $myfont;
+            }
+        }
+        .about__text{
+            width: 548px;
+            height: 160px;
+            margin: 32px auto;
+            p{
+                @include f-style(16px, #979797, 400);
+                font-family: $myfont;
+                line-height: 32px;
+            }
+        }
+    }
+    .about__img{
+        width: 550px;
+        height: 490px;
+    }
+}
+footer{
+    display: flex;
+    align-items: center;
+    width: 1280px;
+    height: 404px;
+    margin: 120px auto;
+    background-color: #F9F9F9;
+}
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    height: 200px;
+    margin: auto;
+    .footer__left{
+        width: 355px;
+        height: 165px;
+        .footer__left-text{
+            width: 355px;
+            height: 40px;
+            margin: 16px auto;
+            p{
+                @include f-style(14px, #979797, 400);
+                font-family: $myfont;
+            }
+        }
+        .footer__left-icon{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 175px;
+            height: 34px;
+            margin: 32px 0;
+        }
+    }
+    .footer__menu{
+        width: 125px;
+        height: 165px;
+        ul li{
+            list-style: none;
+            @include f-style(14px, rgba(151, 151, 151, 1), 400);
+            font-family: $myfont;
+            line-height: 34px;
+        }
+        li:first-child{
+          @include f-style(18px, #161414, 500);
+        }
+    }
+    .footer__form{
+        width: 390px;
+        height: 200px;
+        .footer__form-title{
+            width: 100%;
+            height: 56px;
+            h2{
+                @include f-style(18px, #161414, 500);
+                font-family: $myfont;
+                line-height: 28px;
+            }
+        }
+    }
+}
